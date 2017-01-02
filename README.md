@@ -11,7 +11,7 @@ See a [PDF Thumbnails demo here](https://scandel.github.io/pdfThumbnails/).
 ## Getting started
 
 First get a local copy of the code, clone it using git:
-```
+```bash
 $ git clone git://github.com/scandel/pdfThumbnails
 $ cd pdfThumbnails
 ```
@@ -37,19 +37,19 @@ Now visit `index.html` in your browser, you should see the demo page with thumbn
 
 You just need to keep the `pdfThumbnails.js` file from this project, and the `pdf.js` and `pdf.worker.js` files from pdf.js
 (let them both in the same directory as pdf.js will try to load the worker). In your html file, include the javascripts:
-```
+```html
 <script src="/path/to/pdf.js"></script>
 <script src="/path/to/pdfThumbnails.js"></script>
 ```
 To show a thumbnail, write an `img` element with a `data-pdf-thumbnail-file` attribute:
-```
+```html
 <img data-pdf-thumbnail-file="/my/file.pdf">
 ``` 
 The pdf file path is a relative or absolute path to a file hosted on your site (no cross domain request).
 
 You can add a width _or_ a height in pixels for the generated image. If not, the size of the generated image will be 
 the one of the pdf.
-```
+```html
 <img data-pdf-thumbnail-file="/my/file.pdf" data-pdf-thumbnail-width="200">
 <img data-pdf-thumbnail-file="/my/file.pdf" data-pdf-thumbnail-height="150">
 ```
