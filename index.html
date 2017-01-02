@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        PDF Thumbnail examples
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- PDF.js and Simple PDF Thumbnail scripts -->
+    <script src="pdfjs/build/pdf.js"></script>
+    <script src="pdfThumbnails.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<!-- Github ribbon -->
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+<!-- Page Content -->
+<div class="container" id="maincontent">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">PDF Thumbnails
+                <small>Examples</small>
+            </h1>
+            <p>PDF Thumbnails is a small script to parse html files and generate a source image  for `img` elements
+                with a `data-pdf-thumbnail-file` attribute linking to a pdf file.
+                The image is a view of the first page of the pdf. The script relies on the <a href="https://github.com/mozilla/pdf.js">pdf.js</a> library.
+                Here is the <a href="example.pdf">example pdf</a> used for the thumbnails of this page.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Responsive images (no size specified in data-attributes)</h3>
+        </div>
+        <div class="col-sm-6">
+            <h4>col-sm-6</h4>
+            <a href="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <h4>col-sm-3</h4>
+            <a href="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <h4>col-sm-2</h4>
+            <a href="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+            </a>
+        </div>
+        <div class="col-sm-1">
+            <h4>col-sm-1</h4>
+            <a href="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Fixed width OR height images</h3>
+        </div>
+        <div class="col-sm-4">
+            <h4>data-pdf-thumbnail-width="200"</h4>
+            <a href="example.pdf">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4>data-pdf-thumbnail-height="200"</h4>
+            <a href="example.pdf">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-height="200">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4>data-pdf-thumbnail-width="200" AND data-pdf-thumbnail-height="200"</h4>
+            <a href="example.pdf">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200" data-pdf-thumbnail-height="200">
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>File not found or invalid pdf (see console for errors)</h3>
+        </div>
+        <div class="col-sm-4">
+            <h4>Responsive (fixed 4/3 ratio)</h4>
+            <a href="notfound.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="notfound.pdf">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4>data-pdf-thumbnail-width="200"</h4>
+            <a href="notfound.pdf">
+                <img data-pdf-thumbnail-file="notfound.pdf" data-pdf-thumbnail-width="200">
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <h4>data-pdf-thumbnail-width="200" AND data-pdf-thumbnail-height="200"</h4>
+            <a href="#">
+                <img data-pdf-thumbnail-file="index.html" data-pdf-thumbnail-width="200" data-pdf-thumbnail-height="200">
+            </a>
+        </div>
+    </div>
+    <hr>
+</div>
+<!-- /.container -->
+</body>
+</html>
