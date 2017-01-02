@@ -6,7 +6,7 @@ The image is a view of the first page of the pdf. The script relies on the [pdf.
  
 ## Online demo
 
-See [XXX]().
+See a [PDF Thumbnails demo here](https://scandel.github.io/pdfThumbnails/).
 
 ## Getting started
 
