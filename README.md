@@ -28,6 +28,7 @@ sure your directory structure looks like:
     |--pdfThumbnails.js
     |--index.html
     |--example.pdf
+    |--pdf.png
     ...
 ```    
 
@@ -53,3 +54,13 @@ the one of the pdf.
 <img data-pdf-thumbnail-file="/my/file.pdf" data-pdf-thumbnail-width="200">
 <img data-pdf-thumbnail-file="/my/file.pdf" data-pdf-thumbnail-height="150">
 ```
+You can also add a `src` attribute to the image, which will act as a placeholder:
+```html
+<img data-pdf-thumbnail-file="/my/file.pdf" src="pdf.png">
+```  
+This way: 
+ * the image in `src` will be shown to the user during the loading and rendering time of the pdf, 
+ and the space of the image will be filled when the page is shown to the user;
+ * if an error occurs (file not found or impossible to open), the user will still see something.
+  
+Errors (file not found or wrong format) are logged in the console.
