@@ -20,40 +20,6 @@ var createPDFThumbnails = function(){
         var imgWidth = element.getAttribute('data-pdf-thumbnail-width');
         var imgHeight = element.getAttribute('data-pdf-thumbnail-height');
 
-        // Called on error to draw a red cross in place of the image
-        var errorImage = function() {
-            if (imgWidth && !imgHeight) {
-                imgHeight = imgWidth * 0.75;
-            } else if (imgHeight && !imgWidth) {
-                imgWidth = imgHeight * 1.3333;
-            } else if (!imgWidth && !imgHeight) {
-                imgWidth = 500;
-                imgHeight = 375;
-            }
-            var canvas = document.createElement("canvas");
-            var context = canvas.getContext('2d');
-            canvas.height = imgHeight;
-            canvas.width = imgWidth;
-
-            context.strokeStyle = '#cc0000';
-            context.lineWidth = 10;
-            context.beginPath();
-            context.moveTo(0, 0);
-            context.lineTo(imgWidth, imgHeight);
-            context.moveTo(imgWidth, 0);
-            context.lineTo(0, imgHeight);
-            context.stroke();
-            context.beginPath();
-            context.moveTo(0, 0);
-            context.lineTo(imgWidth, 0);
-            context.lineTo(imgWidth, imgHeight);
-            context.lineTo(0, imgHeight);
-            context.lineTo(0, 0);
-            context.stroke();
-
-            element.src = canvas.toDataURL();
-        };
-
         PDFJS.getDocument(filePath).then(function (pdf) {
             pdf.getPage(1).then(function (page) {
                 var canvas = document.createElement("canvas");
@@ -75,8 +41,12 @@ var createPDFThumbnails = function(){
                 }).then(function () {
                     element.src = canvas.toDataURL();
                 });
-            }).catch(errorImage);
-        }).catch(errorImage);
+            }).catch(function() {
+                console.log("pdfThumbnails error: could not open page 1 of document " + filePath + ". Not a pdf ?");
+            });
+        }).catch(function() {
+            console.log("pdfThumbnails error: could not find or open document " + filePath + ". Not a pdf ?");
+        });
     });
 };
 

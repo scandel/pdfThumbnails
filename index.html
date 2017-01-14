@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        PDF Thumbnail examples
+        PDF Thumbnails
     </title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,25 +48,25 @@
         <div class="col-sm-6">
             <h4>col-sm-6</h4>
             <a href="example.pdf">
-                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-3">
             <h4>col-sm-3</h4>
             <a href="example.pdf">
-                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-2">
             <h4>col-sm-2</h4>
             <a href="example.pdf">
-                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-1">
             <h4>col-sm-1</h4>
             <a href="example.pdf">
-                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="example.pdf" src="pdf.png">
             </a>
         </div>
     </div>
@@ -80,19 +80,19 @@
         <div class="col-sm-4">
             <h4>data-pdf-thumbnail-width="200"</h4>
             <a href="example.pdf">
-                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200" width="200" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-4">
             <h4>data-pdf-thumbnail-height="200"</h4>
             <a href="example.pdf">
-                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-height="200">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-height="200"  height="200" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-4">
             <h4>data-pdf-thumbnail-width="200" AND data-pdf-thumbnail-height="200"</h4>
             <a href="example.pdf">
-                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200" data-pdf-thumbnail-height="200">
+                <img data-pdf-thumbnail-file="example.pdf" data-pdf-thumbnail-width="200" data-pdf-thumbnail-height="200" width="200" src="pdf.png">
             </a>
         </div>
     </div>
@@ -104,21 +104,15 @@
             <h3>File not found or invalid pdf (see console for errors)</h3>
         </div>
         <div class="col-sm-4">
-            <h4>Responsive (fixed 4/3 ratio)</h4>
+            <h4>File not found</h4>
             <a href="notfound.pdf">
-                <img class="img-responsive" data-pdf-thumbnail-file="notfound.pdf">
+                <img class="img-responsive" data-pdf-thumbnail-file="notfound.pdf" src="pdf.png">
             </a>
         </div>
         <div class="col-sm-4">
-            <h4>data-pdf-thumbnail-width="200"</h4>
-            <a href="notfound.pdf">
-                <img data-pdf-thumbnail-file="notfound.pdf" data-pdf-thumbnail-width="200">
-            </a>
-        </div>
-        <div class="col-sm-4">
-            <h4>data-pdf-thumbnail-width="200" AND data-pdf-thumbnail-height="200"</h4>
+            <h4>Invalid file (not a pdf)</h4>
             <a href="#">
-                <img data-pdf-thumbnail-file="index.html" data-pdf-thumbnail-width="200" data-pdf-thumbnail-height="200">
+                <img class="img-responsive" data-pdf-thumbnail-file="index.html" src="pdf.png">
             </a>
         </div>
     </div>
