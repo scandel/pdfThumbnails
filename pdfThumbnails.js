@@ -7,10 +7,10 @@
  */
 var createPDFThumbnails = function(){
 
-    if (typeof PDFJS === 'undefined') {
+    if (typeof pdfjsLib === 'undefined') {
         throw Error("pdf.js is not loaded. Please include it before pdfThumbnails.js.");
     }
-    PDFJS.disableWorker = true;
+    pdfjsLib.disableWorker = true;
 
     // select all img elements with data-pdf-thumbnail-file attribute
     var nodesArray = Array.prototype.slice.call(document.querySelectorAll('img[data-pdf-thumbnail-file]'));
@@ -20,7 +20,7 @@ var createPDFThumbnails = function(){
         var imgWidth = element.getAttribute('data-pdf-thumbnail-width');
         var imgHeight = element.getAttribute('data-pdf-thumbnail-height');
 
-        PDFJS.getDocument(filePath).then(function (pdf) {
+        pdfjsLib.getDocument(filePath).then(function (pdf) {
             pdf.getPage(1).then(function (page) {
                 var canvas = document.createElement("canvas");
                 var viewport = page.getViewport(1.0);

@@ -15,7 +15,7 @@ First get a local copy of the code, clone it using git:
 $ git clone git://github.com/scandel/pdfThumbnails
 $ cd pdfThumbnails
 ```
-Then get a local copy of pdf.js. Use the prebuilt version that you can find on [this page](https://mozilla.github.io/pdf.js/getting_started/).
+Then get a local copy of pdf.js (>=2.0). Use the prebuilt version that you can find on [this page](https://mozilla.github.io/pdf.js/getting_started/).
 Download and extract it. You only need to keep the `build` directory (with both `pdf.js` and `pdf.worker.js`). Make 
 sure your directory structure looks like: 
 
