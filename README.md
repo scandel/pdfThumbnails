@@ -39,9 +39,11 @@ Now visit `index.html` in your browser, you should see the demo page with thumbn
 You just need to keep the `pdfThumbnails.js` file from this project, and the `pdf.js` and `pdf.worker.js` files from pdf.js
 (let them both in the same directory as pdf.js will try to load the worker). In your html file, include the javascripts:
 ```html
-<script src="/path/to/pdf.js"></script>
-<script src="/path/to/pdfThumbnails.js"></script>
+<script src="/path/to/pdfThumbnails.js" data-pdfjs-src="/path/to/pdf.js/build/pdf.js"></script>
 ```
+
+The `data-pdfjs-src` attribute specifies the path of the library, which will only be loaded if there's any PDF thumbnail to display in the page.
+
 To show a thumbnail, write an `img` element with a `data-pdf-thumbnail-file` attribute:
 ```html
 <img data-pdf-thumbnail-file="/my/file.pdf">
